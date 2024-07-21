@@ -1,4 +1,5 @@
-cript to get subdomains details
+#!/usr/bin/env bash
+# Script to get subdomains details
 
 display_info ()
 {
