@@ -44,7 +44,7 @@ frontend http
 frontend https
 	mode http
 	timeout client 10s
-	bind *:443 ssl crt  /etc/letsencrypt/live/www.lilian123.tech/fullchain.pem
+	bind *:443 ssl crt /etc/letsencrypt/live/www.lilian123.tech/www.lilian123.tech.pem
 	default_backend allServers
 
 
@@ -53,5 +53,5 @@ backend allServers
 	timeout server  10s
 	balance roundrobin
 	mode http
-	server 6047-web-01 54.237.236.195 check
-	server 6047-web-02 3.94.158.52 check
+	server 6217-web-01 54.237.236.195:80 check
+	server 6217-web-02 3.94.158.52:80 check
